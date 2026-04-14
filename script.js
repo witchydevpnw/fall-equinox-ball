@@ -5,53 +5,6 @@
 
 'use strict';
 
-/* ============================================================
-   FLORAL BLACK-BACKGROUND REMOVAL
-   Strips near-black pixels from the floral corner images at
-   load time using a canvas, so no transparent PNG is needed.
-   ============================================================ */
-(function initFloralTransparency() {
-  const florals = document.querySelectorAll('.corner-tr, .corner-bl');
-
-  function removeBlack(img) {
-    // Work at a capped resolution for performance
-    const MAX = 1400;
-    const scale = Math.min(1, MAX / Math.max(img.naturalWidth, img.naturalHeight));
-    const w = Math.floor(img.naturalWidth  * scale);
-    const h = Math.floor(img.naturalHeight * scale);
-
-    const canvas = document.createElement('canvas');
-    canvas.width  = w;
-    canvas.height = h;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0, w, h);
-
-    const imageData = ctx.getImageData(0, 0, w, h);
-    const d = imageData.data;
-    const THRESHOLD = 45; // pixels darker than this are faded out
-
-    for (let i = 0; i < d.length; i += 4) {
-      const brightness = (d[i] + d[i + 1] + d[i + 2]) / 3;
-      if (brightness < THRESHOLD) {
-        // Soft fade rather than hard cut so edges look natural
-        d[i + 3] = Math.floor((brightness / THRESHOLD) * d[i + 3]);
-      }
-    }
-
-    ctx.putImageData(imageData, 0, 0);
-    img.src = canvas.toDataURL('image/png');
-  }
-
-  florals.forEach(img => {
-    if (img.complete && img.naturalWidth) {
-      removeBlack(img);
-    } else {
-      img.addEventListener('load', () => removeBlack(img));
-    }
-  });
-})();
-
-
 /* ------------------------------------------------------------
    CONFIG — update these values as needed
    ------------------------------------------------------------ */
