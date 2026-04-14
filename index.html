@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fall Equinox Ball — September 26, 2026</title>
+  <meta name="description" content="Join Obsidian Book Collective for the Fall Equinox Ball — September 26, 2026 at Zintel Creek Clubhouse. 8pm to Midnight.">
+
+  <!--
+    FONTS:
+    Replace the Google Fonts link below with @font-face declarations once you have
+    Wednesday.woff2 and Celandine.woff2 in the /fonts folder.
+    See style.css for the ready-to-uncomment @font-face blocks.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================================================
+       HERO
+       ================================================ -->
+  <section id="hero">
+
+    <!-- Corner illustrations -->
+    <img src="images/unicorn.png"       alt="" class="corner-deco corner-tl" aria-hidden="true">
+    <img src="images/floral-corner.png" alt="" class="corner-deco corner-tr" aria-hidden="true">
+    <img src="images/floral-corner.png" alt="" class="corner-deco corner-bl" aria-hidden="true">
+    <img src="images/dragon.png"        alt="" class="corner-deco corner-br" aria-hidden="true">
+
+    <!-- Falling leaves (drawn by script.js) -->
+    <canvas id="leaves-canvas" aria-hidden="true"></canvas>
+
+    <!-- Main content -->
+    <div class="hero-content">
+      <p class="herald-text">Hear Ye! Hear Ye!</p>
+      <p class="invite-text">Thou art invited to attend the</p>
+      <h1 class="event-title">Fall Equinox Ball</h1>
+      <div class="event-details">
+        <p class="event-date">26th of September, 2026</p>
+        <p class="event-venue">Zintel Creek Clubhouse</p>
+        <p class="event-time">8pm to Midnight</p>
+      </div>
+      <p class="hosted-label">hosted by</p>
+      <img src="images/obc-logo.png" alt="Obsidian Book Collective" class="obc-logo hero-logo">
+    </div>
+
+  </section>
+
+
+  <!-- ================================================
+       COUNTDOWN
+       ================================================ -->
+  <section id="countdown">
+    <div class="section-inner fade-in">
+      <h2 class="section-title">The Hour Approaches</h2>
+
+      <div class="countdown-timer" id="countdown-timer">
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-days">000</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">✦</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">✦</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">✦</span>
+        <div class="countdown-unit">
+          <span class="countdown-number" id="cd-seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Ticket CTA — populated by script.js based on current date -->
+      <div id="ticket-cta"></div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       GALLERY
+       ================================================ -->
+  <section id="gallery">
+    <div class="section-inner fade-in">
+      <h2 class="section-title">Relive the Revelry</h2>
+      <p class="section-subtitle">A glimpse of last year's enchanted evening</p>
+    </div>
+
+    <div class="swiper gallery-swiper">
+      <div class="swiper-wrapper">
+
+        <!--
+          PHOTOS: Add your gallery images here.
+          Save each photo to images/gallery/ and duplicate the block below.
+          Recommended: resize images to ~1200px wide before adding.
+        -->
+        <div class="swiper-slide">
+          <img src="images/gallery/01.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/gallery/02.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/gallery/03.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/gallery/04.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/gallery/05.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/gallery/06.jpg" alt="Fall Equinox Ball 2025">
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ABOUT / EVENT DETAILS
+       ================================================ -->
+  <section id="about">
+    <div class="section-inner fade-in">
+
+      <!-- Decorative divider -->
+      <div class="ornament" aria-hidden="true">✦ ✦ ✦</div>
+
+      <h2 class="section-title">An Evening of Magic & Revelry</h2>
+      <p class="about-text">
+        Don thy finest fantasy attire and join Obsidian Book Collective for a night of enchantment
+        as the season turns. Dance, celebrate, and revel with fellow lovers of books and fantasy
+        beneath the light of the autumn moon.
+      </p>
+
+      <div class="event-info-grid">
+        <div class="info-item">
+          <span class="info-label">When</span>
+          <span class="info-value">September 26, 2026</span>
+          <span class="info-value">8pm – Midnight</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Where</span>
+          <span class="info-value">Zintel Creek Clubhouse</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Hosted By</span>
+          <span class="info-value">Obsidian Book Collective</span>
+        </div>
+      </div>
+
+      <!-- Second ticket CTA for this section -->
+      <div id="ticket-cta-2" class="ticket-cta-secondary"></div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer id="footer">
+    <img src="images/obc-logo.png" alt="Obsidian Book Collective" class="footer-logo">
+    <p class="footer-text">© 2026 Obsidian Book Collective · All rights reserved.</p>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
