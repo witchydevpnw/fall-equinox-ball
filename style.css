@@ -228,11 +228,10 @@ img {
   transform-origin: top left;
 }
 
-/* Floral top-right: black bg → screen makes black vanish */
+/* Floral top-right: black bg removed by JS canvas — no blend mode needed */
 .corner-tr {
   top: -10px;
   right: -10px;
-  mix-blend-mode: screen;
   transform-origin: top right;
 }
 
@@ -240,7 +239,6 @@ img {
 .corner-bl {
   bottom: -10px;
   left: -10px;
-  mix-blend-mode: screen;
   transform: rotate(180deg);
   transform-origin: bottom left;
 }
