@@ -6,29 +6,24 @@
 
 /* ------------------------------------------------------------
    CUSTOM FONTS
-   Uncomment and add files to /fonts/ to enable Wednesday & Celandine.
-   Delete the Google Fonts <link> in index.html when you do this.
    ------------------------------------------------------------ */
-/*
 @font-face {
   font-family: 'Wednesday';
-  src: url('fonts/Wednesday.woff2') format('woff2'),
-       url('fonts/Wednesday.woff')  format('woff'),
-       url('fonts/Wednesday.ttf')   format('truetype');
+  src: url('fonts/wednesday.woff2') format('woff2'),
+       url('fonts/wednesday.woff')  format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Celandine';
-  src: url('fonts/Celandine.woff2') format('woff2'),
-       url('fonts/Celandine.woff')  format('woff'),
-       url('fonts/Celandine.ttf')   format('truetype');
+  src: url('fonts/celandine.woff2') format('woff2'),
+       url('fonts/celandine.woff')  format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-*/
 
 
 /* ------------------------------------------------------------
@@ -49,12 +44,9 @@
   --floral-gray-teal:    #78918e;
   --floral-red:          #d34f49;
 
-  /* Typography
-     Change 'UnifrakturMaguntia' → 'Wednesday'
-     Change 'Cinzel'             → 'Celandine'
-     once font files are in /fonts */
-  --font-display: 'UnifrakturMaguntia', 'Times New Roman', serif;
-  --font-body:    'Cinzel', Georgia, serif;
+  /* Typography */
+  --font-display: 'Wednesday', 'Times New Roman', serif;
+  --font-body:    'Celandine', Georgia, serif;
 
   /* Spacing */
   --section-pad: clamp(60px, 8vw, 100px);
