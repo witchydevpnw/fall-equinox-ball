@@ -297,8 +297,8 @@ img {
 
 .event-title {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 9vw, 7.5rem);
-  color: var(--teal);
+  font-size: clamp(2.6rem, 6.5vw, 5.5rem);
+  color: rgba(116, 147, 145, 0.7);
   line-height: 1.05;
   margin-bottom: 1.5rem;
   opacity: 0;
