@@ -193,6 +193,20 @@ const CONFIG = {
    SWIPER CAROUSEL
    ============================================================ */
 (function initSwiper() {
+  // Update this number if you add or remove photos from images/gallery/
+  const GALLERY_COUNT = 157;
+
+  const wrapper = document.getElementById('gallery-wrapper');
+  if (wrapper) {
+    for (let i = 1; i <= GALLERY_COUNT; i++) {
+      const num = String(i).padStart(3, '0');
+      wrapper.innerHTML += `
+        <div class="swiper-slide">
+          <img src="images/gallery/${num}.jpg" alt="Fall Equinox Ball 2025" loading="lazy">
+        </div>`;
+    }
+  }
+
   new Swiper('.gallery-swiper', {
     slidesPerView: 'auto',
     centeredSlides: true,
