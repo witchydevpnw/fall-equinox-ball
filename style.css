@@ -228,11 +228,13 @@ img {
   transform-origin: top left;
 }
 
-/* Floral top-right: black bg removed by JS canvas — no blend mode needed */
+/* Floral top-right: black bg removed by JS canvas.
+   Filter boosts colors so they read against the light parchment. */
 .corner-tr {
   top: -10px;
   right: -10px;
   transform-origin: top right;
+  filter: saturate(4) contrast(1.6) brightness(0.7);
 }
 
 /* Floral bottom-left: rotate 180° to mirror into bottom-left corner */
@@ -241,6 +243,7 @@ img {
   left: -10px;
   transform: rotate(180deg);
   transform-origin: bottom left;
+  filter: saturate(4) contrast(1.6) brightness(0.7);
 }
 
 /* Dragon: white bg → multiply */
